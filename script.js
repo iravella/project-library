@@ -185,7 +185,30 @@ const books = [
   }
 ]
 
-const recipes = [
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const recipes = [
   {
     name: 'Individual vegetarian lasagnes',
     cuisineType: ['italian'],
@@ -404,3 +427,4 @@ const recipes = [
     image: './recipe-images/grilled.jpg'
   }
 ]
+ */
