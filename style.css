@@ -1,0 +1,73 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .filters p {
+    margin: 0 0 2px 0;
+  }
+  
+  .filters div {
+    margin: 20px;
+  }
+  
+  #books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+
+  .card {
+    min-height: 300px;
+    width: 250px;
+    vertical-align: text-top;
+    background: rgb(241, 193, 193);
+    border-radius: 16px;
+    border: 2px solid rgb(222, 157, 157);
+    margin: 10px;
+  }
+
+  .card img {
+    width: 100%;
+    margin: 12px 0;
+  }
+  
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  button {
+    display: block;
+    margin: 1em 0;
+  }
+  
+  #all,
+  #twentyCentury {
+    display: inline-block;
+    background-color: whitesmoke;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+  }

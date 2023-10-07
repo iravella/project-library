@@ -2,6 +2,10 @@
 If you choose to create your own arrays with elements, just make sure that some
 of the properties make sense to filter on, and some to sort on.*/
 
+const allButton = document.getElementById("all")
+//const twentyCentury = document.getElementById("20 Century")
+const booksSection = document.getElementById("books")
+
 const books = [
   {
     title: 'The Great Gatsby',
@@ -185,6 +189,29 @@ const books = [
   }
 ]
 
+const displayBooks = (books) => {
+  booksSection.innerHTML = ""
+  books.forEach((book) => {
+    booksSection.innerHTML += `
+      <section class="card">
+        <h2>${book.title}</h2>
+        <img src="${book.image}"/>
+      </section>
+    `
+  })
+}
+
+allButton.addEventListener("click", () => {
+  displayBooks(books)
+})
+
+
+twentyCentury.addEventListener("click", () => {
+  const twentyCentury = books.filter((books) => books.year >2000)
+  displayBooks(twentyCentury)
+})
+
+//displayBooks(books)
 
 
 
