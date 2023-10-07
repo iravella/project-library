@@ -196,6 +196,8 @@ const displayBooks = (books) => {
       <section class="card">
         <h2>${book.title}</h2>
         <img src="${book.image}"/>
+        <h2>${book.author}</h2>
+        <h2>${book.year}</h2>
       </section>
     `
   })
