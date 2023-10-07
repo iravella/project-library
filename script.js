@@ -2,8 +2,7 @@
 If you choose to create your own arrays with elements, just make sure that some
 of the properties make sense to filter on, and some to sort on.*/
 
-const allButton = document.getElementById("all")
-//const twentyCentury = document.getElementById("20 Century")
+const allBooksButton = document.getElementById("all")
 const booksSection = document.getElementById("books")
 
 const books = [
@@ -75,7 +74,7 @@ const books = [
     rating: 4.7,
     description:
       'The first book in the beloved Harry Potter series, it introduces readers to the magical world of Hogwarts and the young wizard Harry Potter.',
-    image: "./books-images/harry-potter-and-the-sorcerer'.jpg"
+    image: "./books-images/harry-potter-and-the-sorcerer.jpg"
   },
   {
     title: 'Moby-Dick',
@@ -189,6 +188,7 @@ const books = [
   }
 ]
 
+//using forEach loop add the book title and image to the page
 const displayBooks = (books) => {
   booksSection.innerHTML = ""
   books.forEach((book) => {
@@ -201,17 +201,31 @@ const displayBooks = (books) => {
   })
 }
 
-allButton.addEventListener("click", () => {
+//display all books
+allBooksButton.addEventListener("click", () => {
   displayBooks(books)
 })
 
-
+//Sort the books that are published in 21st century
 twentyCentury.addEventListener("click", () => {
   const twentyCentury = books.filter((books) => books.year >2000)
   displayBooks(twentyCentury)
 })
 
-//displayBooks(books)
+//Create a local array using spread operator[...] and sort the books in Alphabetical order
+alphaOrder.addEventListener("click", () => {
+  let sortedBooks = [...books];
+  sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
+  displayBooks(sortedBooks);
+});
+
+// Search books by title 
+searchBar.addEventListener('input', (e) => {
+    let searchString = e.target.value.toLowerCase();
+    let filteredBooks = books.filter((book) => book.title.toLowerCase().includes(searchString));
+    displayBooks(filteredBooks);
+});
+
 
 
 
