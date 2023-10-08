@@ -5,6 +5,7 @@ of the properties make sense to filter on, and some to sort on.*/
 const allBooksButton = document.getElementById("all");
 const booksSection = document.getElementById("books");
 const errorMessage = document.getElementById("error-message");
+const lowToHighRatingBooks = document.getElementById("lowtoHighRatingBooks")
 
 const books = [
   {
@@ -217,6 +218,31 @@ allBooksButton.addEventListener("click", () => {
   displayBooks(books);
   searchBar.value = "";
 });
+
+//Sort books from New to Old
+newToOldBooks.addEventListener("click", () => {
+  const newToOldBooks = [...books];
+  newToOldBooks.sort((b, a) => parseInt(a.year) - parseInt(b.year));
+  displayBooks(newToOldBooks);
+  searchBar.value = "";
+});
+
+//Sort books from Old to New
+oldToNewBooks.addEventListener("click", () => {
+  const oldToNewBooks = [...books];
+  oldToNewBooks.sort((b, a) => parseInt(b.year) - parseInt(a.year));
+  displayBooks(oldToNewBooks);
+  searchBar.value = "";
+});
+
+//Sort books by rating low to high
+lowToHighRatingBooks.addEventListener("click", () => {
+  const lowToHighRating = [...books];
+  lowToHighRating.sort((b, a) => parseInt(b.rating) - parseInt(a.rating));
+  displayBooks(lowToHighRating);
+  searchBar.value = "";
+});
+
 
 //Sort the books that are published in 21st century and reset the search bar
 twentyCentury.addEventListener("click", () => {

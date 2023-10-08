@@ -67,6 +67,9 @@ button {
 }
 
 #all,
+#newToOldBooks,
+#oldToNewBooks,
+#lowtoHighRatingBooks,
 #alphaOrder,
 #twentyCentury {
   display: inline-block;
@@ -81,7 +84,7 @@ button {
 }
 
 #searchBar {
-  width: 75%;
+  width: 87%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
