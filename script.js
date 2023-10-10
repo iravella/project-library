@@ -213,10 +213,14 @@ const displayBooks = (books) => {
   }
 };
 
+displayBooks(books);
+searchBar.value = "";
+
+
 //display all books and reset the search bar
 allBooksButton.addEventListener("click", () => {
-  displayBooks(books);
-  searchBar.value = "";
+ displayBooks(books);
+ searchBar.value = "";
 });
 
 //Sort books from New to Old
